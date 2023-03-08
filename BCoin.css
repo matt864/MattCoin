@@ -83,6 +83,11 @@ body{
     margin:auto;
     margin-top:10%;
 }
+#graph-track{
+    text-align: center;
+    font-size: 58px;
+    font-weight: 800;
+}
 .label{
     font-size:14px;
     color:rgb(97, 104, 112);
