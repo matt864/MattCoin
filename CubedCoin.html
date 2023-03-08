@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin:0;
+            font-family: 'Titillium Web', sans-serif;
+        }
+        #title{
+            display:grid;
+            grid-template-columns: 20% 80%;
+            width:70%;
+            font-size:6vw;
+            margin:auto;
+            font-weight:700;
+            margin-left:26%;
+            margin-top:1%;
+            text-align: left;
+        }
+        #logo{
+            padding:5% 25%;
+        }
+        #coin{
+            width:8vw;
+            height:8vw;
+            border-radius:50%;
+            background-color: gold;
+            border:3px solid black;
+            background-image: url(BC-images/logo.png);
+            background-size:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #top-stats{
+            width:40%;
+            font-weight:700;
+            margin:auto;
+            margin-top:1vh;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            font-size:5vh;
+        }
+        #visuals{
+             border: 2px solid black;
+            height:48vh;
+            grid-template-columns: 30% 50% 20%;
+            margin:auto;
+            display:grid;
+            margin-top:3vh;
+            width:95%;
+        }
+        #position-track{
+           border: 2px solid black; 
+            text-align: center;
+        }
+          #graph-track{
+           border: 2px solid black; 
+        }
+        .buy-button{
+            width:80%;
+            color:white;
+            background-color: green;
+            border-radius: 20px;
+            margin:auto;
+        }
+        .sell-button{
+            width:80%;
+            color:white;
+            background-color: orangered;
+            border-radius: 20px;
+            margin:auto;
+            margin-top:10%;
+        }
+        div[class*="-button"]:hover{
+            cursor:pointer;
+        }
+        #order-tab{
+            text-align: center;
+             border: 2px solid black; 
+        }
+        input{
+            margin-bottom:10%;
+        }
+        .portfolio-bit{
+            display:grid;
+            width:100%;
+            grid-template-columns: 30% 20% 20% 30%;
+        }
+        .portfolio-bit div{
+            margin:0;
+            margin-bottom:5%;
+        }
+        h5{
+            margin: 0;
+        }
+        #graph{
+            width:100%;
+            margin-left:0%;
+            height:100%;
+        }
+        #game-over{
+            font-size:6vw;
+            width:95%;
+            text-align: center;
+            margin-top:70px;
+            display:none;
+        }
+        @media only screen and (max-width: 800px){
+            #visuals{
+                width:95%;
+                grid-template-columns: 100%;
+                grid-template-rows:30vh 30vh 30vh;
+                margin-bottom: 10%;
+            }
+            #title{
+                width:95%;
+                margin-left:2.5%;
+                grid-template-columns: 30% 70%;
+            }
+            #title-text{
+                font-size:12vw;
+            }
+            #coin{
+                width:15vw;
+                height:15vw;
+                background-size:70%;
+            }
+            #top-stats{
+                width:90%;
+                font-size:3vh;
+                grid-template-columns: 60% 40%;
+                margin-left:2.5%;
+            }
+            #visuals{
+                height:auto;
+            }
+            #graph-track{
+                grid-row-start:1;
+            }
+            h2{
+                margin-top:0.5vh;
+                margin-bottom:0.1vh;
+            }
+            .sell-button{
+                margin-top: 2%;
+            }
+        }
+    </style>
+    </head>
+    <body>
+    <div id="title"><div id="logo"><div id="coin"></div></div><div id="title-text">THRIVECoin</div></div>
+    <div id="top-stats"><div id="current-price-label">Current Price</div><div id="current-price">£70</div>
+        <div id="current-percent-label">Daily % Change</div><div id="current-percent">%</div>
+         <div>Your Cash</div><div id="current-cash">£1000</div>
+        
+        </div>
+        <div id="visuals">
+        <div id="position-track">
+            <h2>Your Portfolio</h2>
+        <div id="portfolio"></div>
+            <div class="sell-button" onclick="sellCoin('all')">Sell All</div>
+            </div>
+        <div id="graph-track"><svg id="graph"></svg></div>
+        <div id="order-tab"><h2>Order THRIVECoin</h2>
+            <input type="number" id="order-number" oninput="generateOrderSummary()">
+            <div class="buy-button" onclick="buyCoin()">Buy</div>
+            <div id="order-summary"></div>
+            </div>
+        </div>
+        <div id="game-over"></div>
+    </body>
+         <script src="BCoin.js"></script>
+</html>
