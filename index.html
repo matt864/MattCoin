@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MattCoin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="BCoin.css" rel="stylesheet">
+    </head>
+    <body>
+    <div id="title"><img src="BC-images/MattCoin logo.png" alt="logo" id="logo"></div>
+    <div id="mobile-wrapper">
+    <div id="top-stats">
+    <div class="stat-holder">
+        <div id="current-price" class="stat">£70</div>
+        <div id="current-price-label" class="label">Current Price</div>
+    </div>    
+        <div class="stat-holder">
+            <div id="current-cash" class="stat">£1000</div>
+            <div class="label">Your Cash</div>
+        
+        </div>
+        
+        </div>
+        <div id="visuals">
+        <div id="position-track">
+            <h2>Your Portfolio</h2>
+        <div id="portfolio"></div>
+            <div class="sell-button button" onclick="sellCoin('all')">Sell All</div>
+            </div>
+        <div id="graph-track"><svg id="graph"></svg></div>
+        <div id="order-tab"><h2>Order MattCoin</h2>
+            <input type="range" min="1" max="10" id="order-number" oninput="generateOrderSummary()">
+            <div class="buy-button button" onclick="buyCoin()">Buy</div>
+            <div id="order-summary"></div>
+            </div>
+        </div>
+    </div>
+        <div id="game-over"></div>
+    </body>
+         <script src="BCoin.js"></script>
+</html>

@@ -1,0 +1,215 @@
+body{
+    margin:0;
+    font-family: 'Inters', sans-serif;
+    color:rgb(25, 25, 27);
+}
+#logo{
+    width:50px;
+}
+#title{
+    display:block;
+    width:70%;
+    font-size:40px;
+    margin:auto;
+    font-weight:900;
+    margin-top:1%;
+    text-align: center;
+}
+#order-summary{
+    color:rgb(97, 104, 112);
+    font-weight: 800;
+    font-size:14px;
+    width:87%;
+    margin: auto;
+}
+.stat-holder{
+    box-shadow: rgb(12 20 66 / 2%) 0px 4px 12px, rgb(12 20 66 / 8%) 0px 30px 80px, rgb(230 233 237) 0px 0px 0px 1px inset;
+    border-radius: 20px;
+    padding:4% 10%;
+    background-color: #ECF0F5;
+}
+.button{
+    text-align: center;
+    width:100px;
+    font-size:14px;
+    font-weight: 700;
+    box-shadow: rgb(12 20 66 / 2%) 0px 4px 12px, rgb(12 20 66 / 8%) 0px 30px 80px, rgb(230 233 237) 0px 0px 0px 1px inset;
+    padding: 3%;
+    border: 0px;;
+}
+#top-stats{
+    width: 30%;
+    display: flex;
+    padding: 1%;
+    font-weight: 700;
+    margin: auto;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+#visuals{
+    height:48vh;
+    grid-template-columns: 20% 50% 20%;
+    margin:auto;
+    column-gap: 5%;
+    display:grid;
+    margin-top:3vh;
+    width:95%;
+}
+#visuals > div {
+    box-shadow: rgb(12 20 66 / 2%) 0px 4px 12px, rgb(12 20 66 / 8%) 0px 30px 80px, rgb(230 233 237) 0px 0px 0px 1px inset;
+    border-radius: 20px;
+    background-color: #ECF0F5;
+}
+#position-track{
+    text-align: left;
+    padding-left:2%
+}
+.buy-button{
+    color:white;
+    background-color: #2075FF;
+    border-radius: 20px;
+    margin:auto;
+    margin-top:20px;
+}
+.sell-button{
+    color:white;
+    background-color: #2075FF;
+    border-radius: 20px;
+    text-align: center;
+    margin:auto;
+    margin-top:10%;
+}
+.label{
+    font-size:14px;
+    color:rgb(97, 104, 112);
+}
+.stat{
+    font-size:26px;
+    font-weight: 900;
+}
+div[class*="-button"]:hover{
+    cursor:pointer;
+}
+h2{
+    text-align: left;
+    font-weight: 800;
+    margin-left: 7%;
+   color: rgb(25, 25, 27)!important;
+    font-size:26px;
+}
+#game-over > h2{
+    margin-left:0px;
+}
+#order-tab{
+    text-align: center;
+    height: 260px;
+}
+input{
+    margin:auto 10% ;
+    background-color: transparent;
+    border:black 2px solid;
+    width: 10%;
+    width:120px;
+}
+.portfolio-sell-button{
+    width:50px!important;
+    font-weight:700;
+}
+.portfolio-bit{
+    display: grid;
+    width: 98%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: rgb(97, 104, 112);
+    grid-template-columns: 30% 20% 20% 30%;
+}
+.portfolio-bit div{
+    margin:0;
+    margin-bottom:5%;
+}
+h5{
+    margin: 0;
+}
+#graph{
+    width:100%;
+    margin-left:0%;
+    height:100%;
+}
+#game-over{
+    font-size:22px;
+    width:10%;
+    text-align: center;
+    margin: auto;
+    margin-top:90px;
+    display:none;
+    box-shadow: rgb(12 20 66 / 2%) 0px 4px 12px, rgb(12 20 66 / 8%) 0px 30px 80px, rgb(230 233 237) 0px 0px 0px 1px inset;
+    border-radius: 20px;
+    padding:3% 4%;
+    background-color: #ECF0F5;
+    color:rgb(97, 104, 112);
+}
+@media only screen and (max-width: 800px){
+    #logo{
+        margin-top: 20px;
+    }
+    #visuals{
+        width:95%;
+        grid-template-columns: 100%;
+        row-gap: 30px;
+        margin-bottom: 10%;
+    }
+    .button{
+        width:80px;
+    }
+    #mobile-wrapper{
+        display: grid;
+    }
+    .stat{
+        font-size:18px;
+    }
+    #title{
+        width:95%;
+    }
+    #title-text{
+        font-size:22px;
+    }
+    #coin{
+        width:15vw;
+        height:15vw;
+        background-size:70%;
+    }
+    input{
+        width:100px;
+    }
+    #top-stats{
+        width:95%;
+    }
+    #visuals{
+        height:auto;
+    }
+    #graph-track{
+        grid-row-start:1;
+    }
+    #order-tab{
+        grid-row-start: 2;
+        height:200px;
+    }
+    #position-track{
+        height:330px;
+    }
+    #order-summary{
+        font-size:14px;
+    }
+    h2{
+  margin:5% 10%;
+  font-size:18px;
+    }
+    .sell-button{
+        margin-top: 2%;
+    }
+}

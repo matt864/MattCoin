@@ -24,9 +24,7 @@ var newblock = {};
         dailystart=price;
     }
 if (dailystart!=undefined){
-    document.getElementById("current-percent").innerHTML = (((newPrice - dailystart)/dailystart)*100).toFixed(2) + "%";
-    if((((newPrice - dailystart)/dailystart)*100)>0){document.getElementById("current-percent").style.color="green"};
-     if((((newPrice - dailystart)/dailystart)*100)<0){document.getElementById("current-percent").style.color="red"};
+
 }
     var dataobject = {};
     dataobject[new Date()] = newPrice;
@@ -47,7 +45,7 @@ if(data.length==endme){
 function generateOrderSummary(){
     var amountofcoin = document.getElementById("order-number").value;
     var priceoforder = amountofcoin*overallprice;
-    document.getElementById("order-summary").innerHTML ="<h3>"+ amountofcoin +" KanwarCoin will cost you £" + priceoforder.toFixed(2); 
+    document.getElementById("order-summary").innerHTML ="<h3>"+ amountofcoin +" MattCoin will cost you £" + priceoforder.toFixed(2); 
     if (amountofcoin=="0"||amountofcoin==""){ document.getElementById("order-summary").innerHTML=""};
 }
 function buyCoin(){
@@ -56,7 +54,7 @@ function buyCoin(){
 if((amountofcoins*overallprice)<cash&&positions.length<5&&amountofcoins!=""&&amountofcoins!=null){
 position["coins"] = amountofcoins;
 position["price"] = overallprice;
-    document.getElementById("portfolio").innerHTML+="<div class='portfolio-bit'><h5 class='position-amount'>"+amountofcoins+ " @ £" + overallprice + "</h5><h5 class='profit'></h5><h5 class='profit-percent'></h5><div class='sell-button' onclick='sellCoin("+(positions.length)+")'>Sell</div></div>";
+    document.getElementById("portfolio").innerHTML+="<div class='portfolio-bit'><h5 class='position-amount'>"+amountofcoins+ " @ £" + overallprice + "</h5><h5 class='profit'></h5><h5 class='profit-percent'></h5><div class='sell-button portfolio-sell-button' onclick='sellCoin("+(positions.length)+")'>Sell</div></div>";
     positions.push(position);
    cash = cash-(amountofcoins*overallprice);
     document.getElementById("current-cash").innerHTML = "£"+cash.toFixed(2);
@@ -117,7 +115,7 @@ function generateGraph(){
         var verticalplacement = document.getElementById("graph").clientHeight * verticalpercent;
         var horizontalplacement = (i+1) * graphwidthbit;
         var oldhorizontalplacement = (i) * graphwidthbit;
-        var linecode = "<line x1='"+oldhorizontalplacement+"' y1='"+oldverticalplacement+"' x2='"+horizontalplacement+"' y2='"+verticalplacement+"' style='stroke:"+color+";stroke-width:1.5' />"
+        var linecode = "<line x1='"+oldhorizontalplacement+"' y1='"+oldverticalplacement+"' x2='"+horizontalplacement+"' y2='"+verticalplacement+"' style='stroke:"+color+";stroke-width:2' />"
         svgcode+=linecode;
     }
     document.getElementById("graph").innerHTML=svgcode;
@@ -126,5 +124,5 @@ function gameOver(){
     document.getElementById("top-stats").style.display="none";
      document.getElementById("visuals").style.display="none";
     document.getElementById("game-over").style.display="block";
-    document.getElementById("game-over").innerHTML="You ended up with £"+cash.toFixed(2);
+    document.getElementById("game-over").innerHTML="<h2>Final score</h2><br>£"+cash.toFixed(2);
 }
