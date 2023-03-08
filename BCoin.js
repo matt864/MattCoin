@@ -2,7 +2,7 @@ var positions = [];
 var data = [70];
 var cash = 1000;
 var dailystart;
-var endme = 180;
+var endme = 360;
 var overallprice;
 var ticker = window.setInterval(determineNewPrice , 1000);
 function determineNewPrice(){
@@ -121,8 +121,12 @@ function generateGraph(){
     document.getElementById("graph").innerHTML=svgcode;
 }
 function gameOver(){
-    document.getElementById("top-stats").style.display="none";
-     document.getElementById("visuals").style.display="none";
-    document.getElementById("game-over").style.display="block";
-    document.getElementById("game-over").innerHTML="<h2>Final score</h2><br>£"+cash.toFixed(2);
+    window.clearInterval(ticker);
+    document.getElementsByClassName("buy-button")[0].style.display = "none";
+    document.getElementsByClassName("sell-button")[0].style.display = "none";
+    var sellButtons = document.getElementsByClassName("portfolio-sell-button");
+    for(let i=0;i<sellButtons.length;i++){
+        sellButtons[i].style.display = "none";
+    }
+    document.getElementById("graph-track").innerHTML="<h2>Final score</h2><br>£"+cash.toFixed(2);
 }
