@@ -124,5 +124,5 @@ function gameOver(){
     document.getElementById("top-stats").style.display="none";
      document.getElementById("visuals").style.display="none";
     document.getElementById("game-over").style.display="block";
-    document.getElementById("game-over").innerHTML="You ended up with £"+cash.toFixed(2);
+    document.getElementById("game-over").innerHTML="<h2>Final score</h2><br>£"+cash.toFixed(2);
 }

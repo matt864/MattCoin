@@ -3,6 +3,9 @@ body{
     font-family: 'Inters', sans-serif;
     color:rgb(25, 25, 27);
 }
+#logo{
+    width:50px;
+}
 #title{
     display:block;
     width:70%;
@@ -11,9 +14,6 @@ body{
     font-weight:900;
     margin-top:1%;
     text-align: center;
-}
-#logo{
-    padding:5% 25%;
 }
 #order-summary{
     color:rgb(97, 104, 112);
@@ -68,18 +68,16 @@ body{
     text-align: left;
     padding-left:2%
 }
-  #graph-track{
-}
 .buy-button{
     color:white;
-    background-color: green;
+    background-color: #2075FF;
     border-radius: 20px;
     margin:auto;
     margin-top:20px;
 }
 .sell-button{
     color:white;
-    background-color: orangered;
+    background-color: #2075FF;
     border-radius: 20px;
     text-align: center;
     margin:auto;
@@ -100,13 +98,22 @@ h2{
     text-align: left;
     font-weight: 800;
     margin-left: 7%;
+   color: rgb(25, 25, 27)!important;
     font-size:26px;
+}
+#game-over > h2{
+    margin-left:0px;
 }
 #order-tab{
     text-align: center;
+    height: 260px;
 }
 input{
     margin:auto 10% ;
+    background-color: transparent;
+    border:black 2px solid;
+    width: 10%;
+    width:120px;
 }
 .portfolio-sell-button{
     width:50px!important;
@@ -116,6 +123,7 @@ input{
     display: grid;
     width: 98%;
     margin-left: 5%;
+    margin-bottom: 20px;
     font-size: 14px;
     color: rgb(97, 104, 112);
     grid-template-columns: 30% 20% 20% 30%;
@@ -133,19 +141,33 @@ h5{
     height:100%;
 }
 #game-over{
-    font-size:6vw;
-    width:95%;
+    font-size:22px;
+    width:10%;
     text-align: center;
-    margin-top:70px;
+    margin: auto;
+    margin-top:90px;
     display:none;
+    box-shadow: rgb(12 20 66 / 2%) 0px 4px 12px, rgb(12 20 66 / 8%) 0px 30px 80px, rgb(230 233 237) 0px 0px 0px 1px inset;
+    border-radius: 20px;
+    padding:3% 4%;
+    background-color: #ECF0F5;
+    color:rgb(97, 104, 112);
 }
 @media only screen and (max-width: 800px){
+    #logo{
+        margin-top: 20px;
+    }
     #visuals{
         width:95%;
         grid-template-columns: 100%;
-        grid-template-rows:30vh 30vh 30vh;
-        row-gap: 50px;
+        row-gap: 30px;
         margin-bottom: 10%;
+    }
+    .button{
+        width:80px;
+    }
+    #mobile-wrapper{
+        display: grid;
     }
     .stat{
         font-size:18px;
@@ -161,6 +183,9 @@ h5{
         height:15vw;
         background-size:70%;
     }
+    input{
+        width:100px;
+    }
     #top-stats{
         width:95%;
     }
@@ -172,6 +197,10 @@ h5{
     }
     #order-tab{
         grid-row-start: 2;
+        height:200px;
+    }
+    #position-track{
+        height:330px;
     }
     #order-summary{
         font-size:14px;

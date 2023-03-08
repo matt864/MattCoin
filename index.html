@@ -3,14 +3,15 @@
 <head>
     <title>MattCoin</title>
     <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="BCoin.css" rel="stylesheet">
     </head>
     <body>
-    <div id="title"><div id="title-text">MattCoin</div></div>
+    <div id="title"><img src="BC-images/MattCoin logo.png" alt="logo" id="logo"></div>
+    <div id="mobile-wrapper">
     <div id="top-stats">
     <div class="stat-holder">
         <div id="current-price" class="stat">£70</div>
@@ -31,11 +32,12 @@
             </div>
         <div id="graph-track"><svg id="graph"></svg></div>
         <div id="order-tab"><h2>Order MattCoin</h2>
-            <input type="number" id="order-number" oninput="generateOrderSummary()">
+            <input type="range" min="1" max="10" id="order-number" oninput="generateOrderSummary()">
             <div class="buy-button button" onclick="buyCoin()">Buy</div>
             <div id="order-summary"></div>
             </div>
         </div>
+    </div>
         <div id="game-over"></div>
     </body>
          <script src="BCoin.js"></script>
