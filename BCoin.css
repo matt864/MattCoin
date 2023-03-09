@@ -193,6 +193,7 @@ h5{
     }
     #top-stats{
         width:95%;
+        justify-content:space-evenly;
     }
     #visuals{
         height:auto;
