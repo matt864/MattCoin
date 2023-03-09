@@ -171,22 +171,8 @@ h5{
     .button{
         width:80px;
     }
-    #mobile-wrapper{
-        display: grid;
-    }
     .stat{
         font-size:18px;
-    }
-    #title{
-        width:100%;
-    }
-    #title-text{
-        font-size:22px;
-    }
-    #coin{
-        width:15vw;
-        height:15vw;
-        background-size:70%;
     }
     input{
         width:100px;
